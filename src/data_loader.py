@@ -4,13 +4,10 @@ from pathlib import Path
 
 import numpy as np
 
+from exceptions import DataLoadError
+
 DEFAULT_DELIMITER = ","
 DEFAULT_SKIP_ROWS = 0
-
-
-class DataLoadError(Exception):
-    """Raised when a dataset file cannot be read or fails validation."""
-
 
 def load_dataset(
     path: str | Path,
